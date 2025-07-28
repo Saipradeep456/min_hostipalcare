@@ -1,0 +1,24 @@
+MediCare Hospital - Appointment Confirmation
+
+Dear {{ patient_name }},
+
+Your appointment has been confirmed! Here are the details:
+
+Appointment Details:
+- Doctor: Dr. {{ doctor_name }}
+- Specialization: {{ appointment.doctor.specialization }}
+- Date: {{ appointment.appointment_date|date:"F d, Y" }}
+- Time: {{ appointment.start_time|time:"g:i A" }} - {{ appointment.end_time|time:"g:i A" }}
+- Reason: {{ appointment.reason }}
+- Status: {{ appointment.get_status_display }}
+
+Important Notes:
+- Please arrive 15 minutes before your appointment time
+- Bring a valid ID and insurance card
+- If you need to reschedule, please contact us at least 24 hours in advance
+
+If you have any questions, please don't hesitate to contact us.
+
+MediCare Hospital
+Phone: (555) 123-4567
+Email: info@medicare-hospital.com
